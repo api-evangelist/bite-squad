@@ -1,23 +1,59 @@
 aid: bite-squad
+
 name: Bite Squad
-description: 'Bite Squad is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://ruffcreekmarkets.com/img/slot.webp
+
+description: 'Bite Squad is a startup that provides a platform for ordering and delivering meals from local restaurants. The company aims to simplify the food ordering experience through an API that enables developers to integrate menu browsing, order placement, and delivery tracking into their applications. While detailed public information is limited, Bite Squad positions itself as a modern solution for on‑demand food services, targeting both consumers and partner restaurants seeking streamlined digital ordering capabilities.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bite-squad/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Attempts to fetch OpenAPI files returned HTML redirects to the landing page.
+  evidence:
+    - url: https://bite-squad.com/openapi.json
+      status: 200
+  checked: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Food
+- Delivery
+- API
+- Startup
+- Restaurant
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://forgeglobal.com/bite-squad_stock/
+- type: Hosts
+  url: hosts/bite-squad-hosts.yml
+- type: DomainSecurity
+  url: security/bite-squad-domain-security.yml
+
+apis: []
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

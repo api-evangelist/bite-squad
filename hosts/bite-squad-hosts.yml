@@ -1,0 +1,42 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 0
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+hosts:
+- host: api.ruffcreekmarkets.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: ruffcreekmarkets.com
+  role: api
+  relation: unknown
+- host: ruffcreekmarkets.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: ruffcreekmarkets.com
+  role: other
+  relation: unknown
+- host: store.ruffcreekmarkets.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: ruffcreekmarkets.com
+  role: other
+  relation: unknown
